@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amelia's</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+    }
+  
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+  
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #444;
+    }
+  
+    nav a {
+      color: white;
+      padding: 1em;
+      text-decoration: none;
+      flex: 1 1 auto;
+      text-align: center;
+    }
+  
+    nav a:hover {
+      background-color: #666;
+    }
+  
+    section {
+      display: none;
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+  
+    section.active {
+      display: block;
+    }
+  
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+  
+      nav a {
+        padding: 0.8em;
+        border-bottom: 1px solid #555;
+      }
+  
+      section {
+        padding: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Amelia's</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('about')">About</a>
+    <a href="#" onclick="showPage('artists')">Artists</a>
+    <a href="#" onclick="showPage('shows')">Shows</a>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Welcome</h2>
+    <p>Location: 3030a 16th st. Mission District, San Francisco, CA 94103</p>
+    <p>Contact: ameliameyerjane@gmail.com </p>
+
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Amelia's is a nonprofit art gallery and music space. Amelia's provides an all inclusive space for artists to create and show their work. The goal is to help young San Francisco artists grow together and celebrate each others differences with art.There are many different forms of art that are showcased. Art forms include video, performance, painting, music, and more! </p>
+    <p>To learn more, volunteer, participate in a show, contribute financially, or donate art supplies, please contact Amelia at ameliameyerjane@gmail.com. Any support is appreciated!  </p>
+  </section>
+
+  <section id="artists">
+    <h2>Artists</h2>
+    <p> Andrew Bass</p>
+    <p> Asaad Doidari</p>
+    <p> Amelia Meyer</p>
+    <p> Derek Hernandes</p>
+    <p> Sofia</p>
+    <p> Jed</p>
+    <p> Vim Evans </p>
+    <p> Cisco</p>
+    <p> Joe Mack</p>
+    <p> Daniel </p>
+    <p> Cody</p>
+    <p> Jaxson</p>
+    <h2>Bands</h2>
+    <p> Wyatt Ramos</p>
+    <p> Snow Day</p>
+    <p> Junipero</p>
+
+  </section>
+
+  <section id="shows">
+    <h2>Shows</h2>
+    <p>Upcoming Shows:
+      <ul>
+        <li>July 26th </li>
+        <img src="img/mud.jpg" alt="Flyer for July 20 show" style="max-width:100%; height:auto; margin-top:10px;">
+      </ul>
+    </p>
+    <p>Past Shows:
+        <ul>
+          <li>June 27th</li>
+          <img src="img/snow.JPG" alt="Flyer for July 20 show" style="max-width:100%; height:auto; margin-top:10px;">
+        </ul>
+      </p>
+  </section>
+
+  <script>
+    function showPage(pageId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
